@@ -37,6 +37,7 @@ export default function RuleCard({ rule, index, onClick }: RuleCardProps) {
         transition-all duration-300 ease-out
         hover:scale-105 hover:shadow-xl hover:-translate-y-1
         ${isHovered ? 'shadow-2xl' : 'shadow-md'}
+        ring-1 ring-black/5 dark:ring-white/5
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
