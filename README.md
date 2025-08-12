@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Forty Rules of Love
 
-## Getting Started
+A beautiful, modern website exploring the forty rules of love - a journey through wisdom, spirituality, and human connection.
 
-First, run the development server:
+## ✨ Features
+
+- **Modern Design**: Built with Next.js 15, TypeScript, and Tailwind CSS v4
+- **Beautiful Typography**: Custom fonts (Inter & Playfair Display) for optimal readability
+- **Interactive Grid**: 4x10 grid layout showcasing all 40 rules with beautiful color variations
+- **Supabase Integration**: Dynamic content loading from Supabase database
+- **Responsive**: Fully responsive design that works on all devices
+- **Dark Mode**: Automatic dark/light mode support
+- **Performance**: Optimized for speed and SEO
+- **Developer Experience**: ESLint, Prettier, and TypeScript for clean code
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (recommended: use the latest LTS version)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd forty-rules-of-love
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +47,95 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Set up Supabase (optional - the app works with placeholder data):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Copy the environment template
+cp .env.local.example .env.local
+# Edit .env.local with your Supabase credentials
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See [SUPABASE_SETUP.md](SUPABASE_SETUP.md) for detailed instructions.
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues automatically
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
+- `npm run type-check` - Run TypeScript type checking
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── globals.css     # Global styles and Tailwind config
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Homepage
+├── components/         # Reusable React components
+├── lib/               # Utility functions and configurations
+├── types/             # TypeScript type definitions
+└── styles/            # Additional stylesheets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project uses a carefully crafted design system with:
+
+- **Colors**: Beautiful gradient palette with violet, rose, emerald, and amber tones
+- **Typography**: Inter for body text, Playfair Display for headings
+- **Grid Layout**: 4x10 responsive grid showcasing all 40 rules
+- **Interactive Cards**: Hover effects and smooth transitions
+- **Spacing**: Consistent spacing scale
+- **Components**: Reusable, accessible components
+
+## 📊 The Forty Rules Grid
+
+The main feature is a beautiful 4-column, 10-row grid displaying all 40 rules:
+
+- **Responsive Design**: Adapts from 2 columns on mobile to 4 columns on desktop
+- **Color Variations**: Each card uses a different color from a curated palette
+- **Interactive**: Hover effects with scale and shadow animations
+- **Accessible**: Proper contrast ratios and keyboard navigation
+- **Dynamic Content**: Rules loaded from Supabase or fallback to placeholder data
+
+## 🌙 Dark Mode
+
+The website automatically adapts to your system's dark/light mode preference and includes custom dark mode styling.
+
+## 📱 Responsive Design
+
+Fully responsive design that works beautifully on:
+
+- Mobile devices (320px+)
+- Tablets (768px+)
+- Desktop (1024px+)
+- Large screens (1440px+)
+
+## 🚀 Deployment
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
