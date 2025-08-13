@@ -114,11 +114,17 @@ export default function FullScreenOverlay({
             }`}
           >
             <blockquote className="font-serif text-xl md:text-3xl lg:text-4xl leading-relaxed text-foreground max-w-5xl mx-auto text-center">
-              <span className="text-4xl md:text-6xl text-primary/50 font-bold">
+              <span
+                className="text-4xl md:text-6xl text-primary/50 font-bold inline-block"
+                style={{ verticalAlign: 'top' }}
+              >
                 &ldquo;
               </span>
               <span className="italic px-2">{rule.rule}</span>
-              <span className="text-4xl md:text-6xl text-primary/50 font-bold">
+              <span
+                className="text-4xl md:text-6xl text-primary/50 font-bold inline-block"
+                style={{ verticalAlign: 'bottom' }}
+              >
                 &rdquo;
               </span>
             </blockquote>
